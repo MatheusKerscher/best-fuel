@@ -53,28 +53,47 @@
         </div>
 
         <form id="form-calc">
-          <div class="input-container mt-2">
-            <label for="ethanol">Etanol</label>
+          <div class="input-container mt-4">
+            <label for="ethanol">Valor por litro do etanol</label>
             <input
               type="text"
               class="input-money"
               id="ethanol"
               name="ethanol"
             />
+
+            <div id="error-container-ethanol" class="hidden-erro mt-1">
+              <p class="error-menssage">
+                O preço por litro do etanol deve ser maior que 0,00
+              </p>
+            </div>
           </div>
 
           <div class="input-container mt-3">
-            <label for="gasoline">Gasolina</label>
+            <label for="gasoline">Valor por litro da gasolina</label>
             <input
               type="text"
               class="input-money"
               name="gasoline"
               id="gasoline"
             />
+
+            <div id="error-container-gasoline" class="hidden-erro mt-1">
+              <p class="error-menssage">
+                O preço por litro da gasolina deve ser maior que 0,00
+              </p>
+            </div>
           </div>
 
           <div class="mt-4">
-            <button class="btn-basic btn-calc" type="submit">Calcular</button>
+            <button
+              disabled
+              id="btn-calc"
+              class="btn-basic btn-calc"
+              type="submit"
+            >
+              Calcular
+            </button>
           </div>
         </form>
       </section>
@@ -92,7 +111,7 @@
         <div class="modal-content">
           <div class="modal-body">
             <div class="d-flex justify-content-between">
-              <h1 class="modal-title fs-5" id="modalHowItWorks">
+              <h1 class="fs-4 dark-text" id="modalHowItWorks">
                 Entenda como o cálculo é feito
               </h1>
 
@@ -105,7 +124,7 @@
             </div>
 
             <div class="mt-3">
-              <p>
+              <p class="dark-text">
                 É feita a divisão do
                 <strong>valor do litro do etanol pelo da gasolina</strong>.
                 Quando o <strong>resultado é menor que 0,7</strong>, a
@@ -113,7 +132,7 @@
                 a recomendação é escolher a gasolina.
               </p>
 
-              <p>
+              <p class="dark-text">
                 <strong>Exemplo:</strong> se o etanol custa R$ 3,29 e a gasolina
                 R$ 4,92, o resultado da divisão do primeiro pelo segundo é 0,67,
                 menor que 0,7. Portanto, é mais vantajoso abastecer com etanol.
