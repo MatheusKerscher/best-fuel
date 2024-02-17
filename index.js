@@ -25,13 +25,15 @@ document.getElementById("form-calc").addEventListener("submit", (ev) => {
 
   const resultCalc = ethanolPrice / gasolinePrice;
 
+  console.log(resultCalc.toFixed(2));
+
   $("#resultCalcModal").modal("show");
 
-  resultCalcContainer.innerHTML = `<p class="mb-0 text-dark"></p>Como o etanol está custando R$${
-    inputEthanol.value
-  } e a gasolina está custando R$${
-    inputGasoline.value
-  } compensa <strong class="result-fuel">abastecer com ${
+  resultCalcContainer.innerHTML = `<p class="mb-0 text-dark"></p>O resultado da divisão do etanol pela gasolina resultou em ${resultCalc
+    .toFixed(2)
+    .replace(".", ",")}, o que é ${
+    resultCalc.toFixed(2) < 0.7 ? "menor" : "maior"
+  } do que 0,70. Portanto, compensa <strong class="result-fuel">abastecer com ${
     resultCalc < 0.7 ? "etanol" : "gasolina"
   }</strong>.`;
 });
