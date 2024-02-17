@@ -5,8 +5,17 @@
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+  --blue: #0076ff;
+  --dark: #000000;
+  --gray: #aaaaaa;
+  --light-gray: #f0f0f0;
+  --red: #ff0000;
+  --white: #ffffff;
+}
+
 body {
-  background-color: #f0f0f0;
+  background-color: var(--light-gray);
 }
 
 main {
@@ -19,24 +28,24 @@ main {
 }
 
 .dark-text {
-  color: #000000;
+  color: var(--dark);
 }
 
 .page-title {
-  color: #0076ff;
+  color: var(--blue);
   font-weight: bolder;
 }
 
 .card-container {
-  background-color: #ffffff;
+  background-color: var(--white);
   padding: 1em;
   border-radius: 8px;
-  box-shadow: 2px 2px 2px 2px #aaaaaa;
+  box-shadow: 2px 2px 2px 2px var(--gray);
   width: 50%;
 }
 
 .form-title {
-  color: #000000;
+  color: var(--dark);
   text-align: center;
   font-weight: normal;
 }
@@ -63,8 +72,8 @@ main {
 }
 
 .btn-calc {
-  background-color: #0076ff;
-  color: #ffffff;
+  background-color: var(--blue);
+  color: var(--white);
   padding: 6px 40px;
   height: 45px;
   font-weight: 600;
@@ -95,7 +104,7 @@ main {
 label {
   cursor: pointer;
   font-size: 18px;
-  color: #000000;
+  color: var(--dark);
 }
 
 input {
@@ -103,7 +112,7 @@ input {
   padding: 0 6px;
   border: none;
   border-radius: 6px;
-  box-shadow: 2px 2px 3px 1px #aaaaaa;
+  box-shadow: 2px 2px 3px 1px var(--gray);
   outline: none;
   transition: 0.1s ease-in-out;
 }
@@ -111,7 +120,7 @@ input {
 input:focus {
   transition: 0.1s ease-in-out;
   border-width: 2px;
-  box-shadow: 2px 2px 3px 1px #0076ff;
+  box-shadow: 2px 2px 3px 1px var(--blue);
 }
 
 .hidden-erro {
@@ -123,10 +132,19 @@ input:focus {
 }
 
 .error-menssage {
-  color: #ff0000;
+  color: var(--red);
   font-weight: 500;
   text-align: center;
   margin-bottom: 0;
+}
+
+.result-fuel {
+  color: var(--blue);
+}
+
+.title-blue {
+  color: var(--blue);
+  font-weight: bolder;
 }
 
 /* Style for bootstrap components */
